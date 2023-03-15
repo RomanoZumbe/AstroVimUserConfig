@@ -1,6 +1,3 @@
 return {
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-    },
+    "catppuccin/nvim",
 }
