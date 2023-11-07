@@ -24,13 +24,24 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>lf"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", desc = "Format Buffer" },
-    ["gf"] = { "<cmd>Lspsaga finder<CR>", desc = "Show LSP Info" }, -- show definition, references
-    ["[e"] = { function()
-      require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
-    end, silent = true, desc = "Jump to previous error" },
-    ["]e"] = { function()
-      require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
-    end, silent = true, desc = "Jump to next error" },
+    ["gf"] = { "<cmd>Lspsaga finder<CR>", desc = "Find references" }, -- show definition, references
+    ["ga"] = { "<cmd>Lspsaga incoming_calls<cr>", desc = "Incommin calls" },
+    ["go"] = { "<cmd>Lspsaga outline<cr>", desc = "Show outline"},
+    ["K"] = { "<cmd>Lspsaga hover_doc<CR>", desc = "LSP Description" },
+    ["[e"] = {
+      function()
+        require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      end,
+      silent = true,
+      desc = "Jump to previous error"
+    },
+    ["]e"] = {
+      function()
+        require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
+      end,
+      silent = true,
+      desc = "Jump to next error"
+    },
     ["<leader>lt"] = { "<cmd>TagbarToggle<CR>", silent = true, desc = "Toggle Tagbar" }
   },
   t = {
