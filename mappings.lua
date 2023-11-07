@@ -24,7 +24,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>lf"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", desc = "Format Buffer" },
-    ["gf"] = { "<cmd>Lspsaga lsp_finder<CR>", desc = "Show LSP Info" }, -- show definition, references
+    ["gf"] = { "<cmd>Lspsaga finder<CR>", desc = "Show LSP Info" }, -- show definition, references
     ["[e"] = { function()
       require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
     end, silent = true, desc = "Jump to previous error" },
