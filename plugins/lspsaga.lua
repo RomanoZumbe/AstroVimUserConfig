@@ -2,7 +2,7 @@ return {
   "glepnir/lspsaga.nvim",
   lazy = false,
   config = function()
-    require("lspsaga").setup({
+    require("lspsaga").init_lsp_saga({
       -- keybinds for navigation in lspsaga window
       move = { prev = "<C-p>", next = "<C-n>" },
       -- use enter to open file with finder
