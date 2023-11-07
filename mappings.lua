@@ -30,7 +30,8 @@ return {
     end, silent = true, desc = "Jump to previous error" },
     ["]e"] = { function()
       require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
-    end, silent = true, desc = "Jump to next error" }
+    end, silent = true, desc = "Jump to next error" },
+    ["<leader>lt"] = { "<cmd>TagbarToggle<CR>", silent = true, desc = "Toggle Tagbar" }
   },
   t = {
     -- setting a mapping to false will disable it
