@@ -26,8 +26,9 @@ return {
     ["<leader>lf"] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", desc = "Format Buffer" },
     ["gf"] = { "<cmd>Lspsaga finder<CR>", desc = "Find references" }, -- show definition, references
     ["ga"] = { "<cmd>Lspsaga incoming_calls<cr>", desc = "Incommin calls" },
-    ["go"] = { "<cmd>Lspsaga outline<cr>", desc = "Show outline"},
+    ["go"] = { "<cmd>Lspsaga outline<cr>", desc = "Show outline" },
     ["K"] = { "<cmd>Lspsaga hover_doc<CR>", desc = "LSP Description" },
+    ["<leader>k"] = { "<cmd>%s/\\(.*\\)\\n/('\\1'),\\r/<cr>dd$xggVGy" },
     ["[e"] = {
       function()
         require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
